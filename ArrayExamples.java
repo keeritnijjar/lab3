@@ -5,7 +5,16 @@ public class ArrayExamples {
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
+      int temp = arr[i];
       arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - 1 - i ] = temp;
+
+      // [2, 3]
+      // arr = [3,3]
+      // arr = [3,3]
+      // store the number to replace into the variable, takes whats on the 
+      // opposite side and replaces, replaces the opposite value on the other 
+      // side of the array, swapping two indexes in a array 
     }
   }
 
@@ -14,7 +23,8 @@ public class ArrayExamples {
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
+      newArray[i] = arr[arr.length - i - 1];
+      
     }
     return arr;
   }
